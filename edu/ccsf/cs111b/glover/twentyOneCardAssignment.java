@@ -47,34 +47,13 @@ public class twentyOneCardAssignment { // Declares class of program
 				System.out.print("ERROR: Invalid number: \t"); // Error message
 				userColumn = scan.nextInt(); // User inputs valid number
 			}
-			userColumn--; // User input will be number from 1 to 3. However, actual column numbering
-							// starts at 0. Thus, it is necessary to subtract 1 from user input.
-			deck = pickup(deck, userColumn); // New deck is created using the pickup function. Pickup function accepts
-												// old deck array, as well as the above user input, "userColumn", as
-												// parameters.
+			userColumn--; // User input will be number from 1 to 3. However, actual column numbering starts at 0. Thus, it is necessary to subtract 1 from user input.
+			deck = pickup(deck, userColumn); // New deck is created using the pickup function. Pickup function accepts old deck array, as well as the above user input, "userColumn", as parameters.
 		}
 		displayDeck(deck); // displayDeck function accepts deck array values as parameter
 
-		System.out.print("Is your number " + deck[10] + "? (Enter \"y\" for \"yes\", or \"n\" for \"no\"): \t"); // User
-																													// asked
-																													// if
-																													// element
-																													// 10
-																													// of
-																													// deck
-																													// array
-																													// is
-																													// there
-																													// number.
-																													// User
-																													// inputs
-																													// "y"
-																													// to
-																													// confirm,
-																													// or
-																													// "n"
-																													// to
-																													// deny.
+		// User asked if element 10 of deck array is their number. User inputs “y” to confirm, or “n” to deny this.
+		System.out.print("Is your number " + deck[10] + "? (Enter \"y\" for \"yes\", or \"n\" for \"no\"): \t");
 		char finalInput = scan.next().charAt(0); // Calls char scan.
 		if (finalInput == 'y') {
 			System.out.print("Yay! I'm always right!");
